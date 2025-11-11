@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 2. Obtener la fila (ROW) de la URL
     const params = new URLSearchParams(window.location.search);
-    // Extrae el parámetro 'row'. Si no existe, usa la Fila 2 por defecto.
+    // Usa el parámetro 'row', si no existe, usa la Fila 2 por defecto.
     const TARGET_ROW = parseInt(params.get('row')) || 2; 
 
     // 3. Lógica de Lectura (Fetch CSV y Fila Fija)
@@ -70,6 +70,5 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 5. Inicialización
     updateCountdown();
-    // La actualización se hace cada 5 minutos
     setInterval(updateCountdown, 1000 * 60 * 5); 
 });
